@@ -29,6 +29,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Calendar;
 
@@ -204,7 +206,11 @@ public class EventEditActivity extends AppCompatActivity
         calendar.set(Calendar.MINUTE, event.getTime().getMinute());
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
-        scheduleNotification(getNotification(title), event.getId());
+        LocalDateTime eventDateTime = event.getDate().atTime(event.getTime());
+        if(eventDateTime.isAfter(LocalDate.now().atTime(LocalTime.now())))
+        {
+            scheduleNotification(getNotification(title), event.getId());
+        }
         finish();
     }
 
