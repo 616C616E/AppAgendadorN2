@@ -64,6 +64,18 @@ public class EventAdapter extends ArrayAdapter<EventEntity>
         Button btnFiveStar = convertView.findViewById(R.id.btnFiveStar);
         Drawable gold = getContext().getResources().getDrawable( R.drawable.goldstar );
         eventCellIV.setImageBitmap(event.getImage());
+        switch(event.getReview()){
+            case 5:
+                btnFiveStar.setCompoundDrawablesWithIntrinsicBounds(gold,null,null,null);
+            case 4:
+                btnFourStar.setCompoundDrawablesWithIntrinsicBounds(gold,null,null,null);
+            case 3:
+                btnThreeStar.setCompoundDrawablesWithIntrinsicBounds(gold,null,null,null);
+            case 2:
+                btnTwoStar.setCompoundDrawablesWithIntrinsicBounds(gold,null,null,null);
+            case 1:
+                btnOneStar.setCompoundDrawablesWithIntrinsicBounds(gold,null,null,null);
+        }
 
 
         if(event.getDate().isAfter(LocalDate.now()))
@@ -94,8 +106,46 @@ public class EventAdapter extends ArrayAdapter<EventEntity>
             }
         });
 
-
-
+        btnOneStar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DB db = new DB(eventContext);
+                db.updateReview(event.getId(), 1);
+                onItemListener.refreshView();
+            }
+        });
+        btnTwoStar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DB db = new DB(eventContext);
+                db.updateReview(event.getId(), 2);
+                onItemListener.refreshView();
+            }
+        });
+        btnThreeStar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DB db = new DB(eventContext);
+                db.updateReview(event.getId(), 3);
+                onItemListener.refreshView();
+            }
+        });
+        btnFourStar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DB db = new DB(eventContext);
+                db.updateReview(event.getId(), 4);
+                onItemListener.refreshView();
+            }
+        });
+        btnFiveStar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DB db = new DB(eventContext);
+                db.updateReview(event.getId(), 5);
+                onItemListener.refreshView();
+            }
+        });
         return convertView;
     }
 

@@ -3,21 +3,21 @@
     <string name="back"><![CDATA[<]]></string>
     <string name="forward"><![CDATA[>]]></string>
 
-    <string name="sun">SUN</string>
-    <string name="mon">MON</string>
-    <string name="tue">TUE</string>
-    <string name="wed">WED</string>
-    <string name="thu">THU</string>
-    <string name="fri">FRI</string>
-    <string name="sat">SAT</string>
-    <string name="week">WEEK</string>
-    <string name="month">MONTH</string>
+    <string name="sun">DOM</string>
+    <string name="mon">SEG</string>
+    <string name="tue">TER</string>
+    <string name="wed">QUA</string>
+    <string name="thu">QUI</string>
+    <string name="fri">SEX</string>
+    <string name="sat">SAB</string>
+    <string name="week">SEMANA</string>
+    <string name="month">MÊS</string>
     <string name="plus">+</string>
-    <string name="title">Title:</string>
-    <string name="date">Date:</string>
-    <string name="time">Time:</string>
-    <string name="save">Save</string>
-    <string name="pickImage">PICK IMAGE</string>
-    <string name="pickTime">PICK TIME</string>
+    <string name="title">Título:</string>
+    <string name="date">Data:</string>
+    <string name="time">Hora:</string>
+    <string name="save">Salvar</string>
+    <string name="pickImage">IMAGEM</string>
+    <string name="pickTime">HORA</string>
 
 </resources>
