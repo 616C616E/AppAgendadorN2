@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">APPN2</string>
+    <string name="back"><![CDATA[<]]></string>
+    <string name="forward"><![CDATA[>]]></string>
+
+    <string name="sun">SUN</string>
+    <string name="mon">MON</string>
+    <string name="tue">TUE</string>
+    <string name="wed">WED</string>
+    <string name="thu">THU</string>
+    <string name="fri">FRI</string>
+    <string name="sat">SAT</string>
+    <string name="week">WEEK</string>
+    <string name="month">MONTH</string>
+    <string name="plus">+</string>
+    <string name="title">Title:</string>
+    <string name="date">Date:</string>
+    <string name="time">Time:</string>
+    <string name="save">Save</string>
+    <string name="pickImage">PICK IMAGE</string>
+    <string name="pickTime">PICK TIME</string>
+
+</resources>
